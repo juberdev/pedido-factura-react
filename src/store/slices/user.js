@@ -22,7 +22,7 @@ const initialState = {
 };
 
 const slice = createSlice({
-	name: 'user',
+	name: 'usuarios',
 	initialState,
 	reducers: {
 		// HAS ERROR
@@ -147,15 +147,17 @@ export default slice.reducer;
 
 // ----------------------------------------------------------------------
 
-export function getUsersListStyle1() {
-	return async () => {
-		try {
-			const response = await axios.get('/api/user-list/s1/list');
-			dispatch(slice.actions.getUsersListStyle1Success(response.data.users_s1));
-		} catch (error) {
-			dispatch(slice.actions.hasError(error));
-		}
-	};
+export function getUsersListStyle1(user) {
+	const hola = 5;
+	console.log(user, 'user');
+	return hola;
+	// try {
+	// 	console.log('hola mundo');
+	// 	// const response = await axios.get('/api/user-list/s1/list');
+	// 	// dispatch(slice.actions.getUsersListStyle1Success(response.data.users_s1));
+	// } catch (error) {
+	// 	dispatch(slice.actions.hasError(error));
+	// }
 }
 
 export function getUsersListStyle2() {

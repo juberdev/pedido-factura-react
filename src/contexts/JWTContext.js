@@ -12,6 +12,9 @@ import accountReducer from 'store/accountReducer';
 // project imports
 import Loader from 'ui-component/Loader';
 import axios, { httpClient } from 'utils/axios';
+import { useDispatch, useSelector } from 'react-redux';
+// import { getUsersListStyle1 } from 'store/slices/user';
+// import { setUserSuccess } from 'store/slices/user';
 
 const chance = new Chance();
 
@@ -57,7 +60,7 @@ const JWTContext = createContext(null);
 
 export const JWTProvider = ({ children }) => {
 	const [state, dispatch] = useReducer(accountReducer, initialState);
-
+	console.log(state, 'preuha breña');
 	useEffect(() => {
 		const init = async () => {
 			try {
@@ -98,7 +101,8 @@ export const JWTProvider = ({ children }) => {
 		console.log(response.data.data);
 		const { token, user } = response.data.data;
 		// const { user } = response.data;
-
+		// dispatch(setUserSuccess(user));
+		// getUsersListStyle1(user);
 		// console.log(user, 'usuario');
 		// console.log(access_token, 'usuario');
 

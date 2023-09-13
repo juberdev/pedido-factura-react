@@ -9,16 +9,14 @@ import Loadable from 'ui-component/Loadable';
 // login routing
 const AuthLogin = Loadable(lazy(() => import('views/auth')));
 // const AuthLogin = Loadable(lazy(() => import('views/pages/authentication/authentication3/Login3')));
-// const AuthRegister = Loadable(
-// 	lazy(() => import('views/pages/authentication/authentication3/Register3'))
-// );
-// const AuthForgotPassword = Loadable(
-// 	lazy(() => import('views/pages/authentication/authentication3/ForgotPassword3'))
-// );
+const AuthRegister = Loadable(
+	lazy(() => import('views/pages/authentication/authentication3/Register3'))
+);
+const Orders = Loadable(lazy(() => import('views/orders')));
 
 // ==============================|| AUTH ROUTING ||============================== //
 
-const LoginRoutes = {
+const StoreRoutes = {
 	path: '/',
 	element: (
 		<NavMotion>
@@ -29,18 +27,10 @@ const LoginRoutes = {
 	),
 	children: [
 		{
-			path: '/',
-			element: <AuthLogin />
+			path: '/order',
+			element: <Orders />
 		}
-		// {
-		// 	path: '/register',
-		// 	element: <AuthRegister />
-		// },
-		// {
-		// 	path: '/forgot',
-		// 	element: <AuthForgotPassword />
-		// }
 	]
 };
 
-export default LoginRoutes;
+export default StoreRoutes;

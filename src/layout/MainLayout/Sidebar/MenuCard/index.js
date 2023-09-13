@@ -4,21 +4,21 @@ import { memo } from 'react';
 // material-ui
 import { styled, useTheme } from '@mui/material/styles';
 import {
-	Avatar,
+	// Avatar,
 	Card,
-	CardContent,
+	// CardContent,
 	Grid,
 	LinearProgress,
-	List,
-	ListItem,
-	ListItemAvatar,
-	ListItemText,
+	// List,
+	// ListItem,
+	// ListItemAvatar,
+	// ListItemText,
 	Typography,
 	linearProgressClasses
 } from '@mui/material';
 
 // assets
-import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
+// import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
 
 // styles
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
