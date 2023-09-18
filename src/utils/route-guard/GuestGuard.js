@@ -14,14 +14,17 @@ import { DASHBOARD_PATH } from 'config';
  */
 
 const GuestGuard = ({ children }) => {
-	const { isLoggedIn } = useAuth();
+	const { isLoggedIn, user } = useAuth();
 	const navigate = useNavigate();
 
 	useEffect(() => {
 		if (isLoggedIn) {
-			navigate(DASHBOARD_PATH, { replace: true });
+			if (user.rol_id === 1) {
+				navigate(DASHBOARD_PATH, { replace: true });
+			}
+			navigate('/store/order', { replace: true });
 		}
-	}, [isLoggedIn, navigate]);
+	}, [isLoggedIn, navigate, user]);
 
 	return children;
 };

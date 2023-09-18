@@ -1,7 +1,7 @@
 import { Button, Typography } from '@mui/material';
 import MainCard from 'ui-component/cards/MainCard';
 
-function Orders() {
+export default function User() {
 	return (
 		<MainCard title="Productos" secondary={<Button variant="contained">Agregar</Button>}>
 			<Typography variant="body2">
@@ -14,5 +14,3 @@ function Orders() {
 		</MainCard>
 	);
 }
-
-export default Orders;

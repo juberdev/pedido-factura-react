@@ -7,6 +7,7 @@ import Loadable from 'ui-component/Loadable';
 
 // widget routing
 const Product = Loadable(lazy(() => import('views/maintainer/product')));
+const User = Loadable(lazy(() => import('views/maintainer/user')));
 const Dashboard = Loadable(lazy(() => import('views/maintainer/dashboard')));
 
 // application routing
@@ -34,19 +35,11 @@ const MaintenanceRoutes = {
 		{
 			path: '/mantenimiento/dashboard',
 			element: <Dashboard />
+		},
+		{
+			path: '/mantenimiento/usuario',
+			element: <User />
 		}
-		// {
-		// 	path: '/mantenimiento/tipoReserva',
-		// 	element: <TipoReserva />
-		// },
-		// {
-		// 	path: '/mantenimiento/adicional',
-		// 	element: <Acional />
-		// },
-		// {
-		// 	path: '/mantenimiento/reserva',
-		// 	element: <Reserva />
-		// }
 	]
 };
 

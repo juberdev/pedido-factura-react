@@ -148,6 +148,8 @@ export const JWTProvider = ({ children }) => {
 	const logout = () => {
 		setSession(null);
 		dispatch({ type: LOGOUT });
+		window.location.href = '/';
+		console.log('ruta del init');
 	};
 
 	const resetPassword = email => console.log(email);

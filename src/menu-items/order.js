@@ -31,7 +31,7 @@ const order = {
 			id: 'order',
 			title: 'order',
 			type: 'item',
-			url: '/order',
+			url: '/store/order',
 			icon: icons.IconSoccerField,
 			breadcrumbs: false
 		}

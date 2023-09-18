@@ -36,35 +36,11 @@ const maintenance = {
 			breadcrumbs: false
 		},
 		{
-			id: 'deporte',
-			title: 'Deportes',
+			id: 'usuario',
+			title: 'Usuario',
 			type: 'item',
-			url: '/mantenimiento/deporte',
-			icon: icons.IconBallFootball,
-			breadcrumbs: false
-		},
-		{
-			id: 'tipoReserva',
-			title: 'Tipos de Reservas',
-			type: 'item',
-			url: '/mantenimiento/tipoReserva',
-			icon: icons.IconTicket,
-			breadcrumbs: false
-		},
-		{
-			id: 'adicional',
-			title: 'Adicionales',
-			type: 'item',
-			url: '/mantenimiento/adicional',
-			icon: icons.IconRocket,
-			breadcrumbs: false
-		},
-		{
-			id: 'reserva',
-			title: 'reserva',
-			type: 'item',
-			url: '/mantenimiento/reserva',
-			icon: icons.IconRocket,
+			url: '/mantenimiento/usuario',
+			icon: icons.IconSoccerField,
 			breadcrumbs: false
 		}
 	]
