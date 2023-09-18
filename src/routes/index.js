@@ -10,6 +10,6 @@ import StoreRoutes from './StoreRoutes';
 
 export default function ThemeRoutes() {
 	const state = useContext(JWTContext);
-	console.log(state, ' con fe ');
+	console.log(state.rol_id, ' con fe ');
 	return useRoutes([LoginRoutes, MaintenanceRoutes, StoreRoutes]);
 }

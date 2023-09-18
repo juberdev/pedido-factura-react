@@ -12,9 +12,6 @@ import accountReducer from 'store/accountReducer';
 // project imports
 import Loader from 'ui-component/Loader';
 import axios, { httpClient } from 'utils/axios';
-import { useDispatch, useSelector } from 'react-redux';
-// import { getUsersListStyle1 } from 'store/slices/user';
-// import { setUserSuccess } from 'store/slices/user';
 
 const chance = new Chance();
 
@@ -46,6 +43,7 @@ const setSession = serviceToken => {
 			const token = 'tu_token_aqui'; // Acceder al token desde el estado global o contexto
 			if (token) {
 				config.headers['Authorization'] = `Bearer ${serviceToken}`;
+				// console.log(`Bearer ${serviceToken}`);
 			}
 			return config;
 		});
@@ -69,7 +67,7 @@ export const JWTProvider = ({ children }) => {
 					setSession(serviceToken);
 					const response = await httpClient.get(`/auth/refresh`);
 					const { user, token } = response.data.data;
-					console.log(response.data.data, 'del token');
+					console.log(token, 'del token');
 					// console.log(user, 'usuario');
 					setSession(token);
 
